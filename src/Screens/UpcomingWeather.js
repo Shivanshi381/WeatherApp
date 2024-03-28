@@ -1,7 +1,8 @@
 import React from "react" 
-import { FlatList, SafeAreaView ,StyleSheet,Text, View,StatusBar,ImageBackground} from "react-native"
+import { FlatList, SafeAreaView ,StyleSheet,Text,StatusBar,ImageBackground} from "react-native"
 // we have declared a variable data it is having array which is having 3 objects 
 import {Feather} from '@expo/vector-icons'
+import ListItem from "../components/ListItem"
 const DATA=[
     {
         dt_txt:"2024-03-24 12:00:00",
@@ -51,7 +52,7 @@ const Item =(props)=>{
 }
 const UpcomingWeather = () => {
     const renderItem = ({ item }) => (
-        <Item condition={item.weather[0].main} dt_txt={item.dt_txt} min={item.main.temp_min} max={item.main.temp_max} />
+        <ListItem condition={item.weather[0].main} dt_txt={item.dt_txt} min={item.main.temp_min} max={item.main.temp_max} />
     );
 
 
@@ -76,25 +77,7 @@ const styles=StyleSheet.create({
         marginTop: StatusBar.currentHeight || 0,
         backgroundColor:'teal'
     },
-    item:{
-        padding:20,
-        marginVertical:8,
-        marginHorizontal:16,
-        flexDirection:'row',
-        justifyContent:'space-around',
-        alignItems:'center',
-        borderWidth:5,
-        backgroundColor:'pink'
-
-    },
-    temp:{
-        color:'white',
-        fontSize:20
-    },
-    date:{
-        color:'white',
-        fontSize:15
-    },
+    
     Image:{
       flex:1
     }
