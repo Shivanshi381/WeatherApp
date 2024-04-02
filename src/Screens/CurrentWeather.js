@@ -12,7 +12,7 @@ const CurrentWeather = () =>{
        
         <Text style={temp}>6</Text>
         <Text style={feels}>Feels Like 5</Text>
-        <RowText messageOne={'High:8'} messageTwo={'Low:6'} containerStyles={HighLowwrapper} messageOneStyles={HighLow} messageTwoStyles={HighLow}/>
+        <RowText messageOne={'High:8'} messageTwo={' Low:6'} containerStyles={HighLowwrapper} messageOneStyles={HighLow} messageTwoStyles={HighLow}/>
        
         </View>
         <RowText messageOne={'Its Sunny'} messageTwo={'Its Perfect t-shirt weather'} containerStyles={bodyWrapper} messageOneStyles={description} messageTwoStyles={message} />
@@ -25,7 +25,7 @@ const CurrentWeather = () =>{
 const styles=StyleSheet.create({
   wrapper:{
     flex:1,
-    backgroundColor:'pink'
+    backgroundColor:'lightblue'
   },
   container:{
     

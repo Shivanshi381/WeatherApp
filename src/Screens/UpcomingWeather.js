@@ -59,7 +59,7 @@ const UpcomingWeather = () => {
     
     return (
         <SafeAreaView style={styles.container}>
-            <Text>Upcoming Weather</Text>
+            {/* <Text>Upcoming Weather</Text> */}
             <ImageBackground source={require('../../assets/Upcoming_background.jpg')}  style={styles.Image}>
                 <FlatList
                     // passing data here 
