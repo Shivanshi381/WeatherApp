@@ -2,6 +2,9 @@ import React from "react"
 import {View, Text,SafeAreaView,StyleSheet} from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import RowText  from "../components/RowText"
+import { weatherType } from "../utilities/weatherType.js"
+//  {}used becos we r importing object and not a component  
+
 const CurrentWeather = () =>{
   const{wrapper,container,temp,feels,HighLowwrapper,HighLow,bodyWrapper,description,message}=styles
   return (
@@ -15,7 +18,7 @@ const CurrentWeather = () =>{
         <RowText messageOne={'High:8'} messageTwo={' Low:6'} containerStyles={HighLowwrapper} messageOneStyles={HighLow} messageTwoStyles={HighLow}/>
        
         </View>
-        <RowText messageOne={'Its Sunny'} messageTwo={'Its Perfect t-shirt weather'} containerStyles={bodyWrapper} messageOneStyles={description} messageTwoStyles={message} />
+        <RowText messageOne={'Its Sunny'} messageTwo={weatherType['Thunderstorm'].message} containerStyles={bodyWrapper} messageOneStyles={description} messageTwoStyles={message} />
        
      
     </SafeAreaView>
