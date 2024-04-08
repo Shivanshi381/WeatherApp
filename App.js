@@ -16,7 +16,20 @@ const App = () => {
       </View>
     );
   }
-
+  useEffect(()=>{
+    // using async func 
+    (async()=>{
+      let{}=await Location.requestForegroundPermissionAsync()
+      if(status != 'granted'){
+        setError('permission to access location was denied')
+        return
+      }
+      let location =await Location.getCurrentPositionAsync({})
+      setLocation(location)
+    })()
+    // as we want to immediately invoke this at the end of function we r using set of parenthesis 
+  },[])
+  // passing empty array inside useeffect for the dependencies 
   return (
     <NavigationContainer>
       {/* We want to wrap all components inside tab navigator */}
